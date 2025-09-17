@@ -1,15 +1,19 @@
-import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import CafeSearch from "./pages/CafeSearch";
+import Favourites from "./pages/Favourites";
 
 function App() {
   return (
-    <div className="App">
+    <Router>
       <Navbar />
-      <Hero />
-      <Footer />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/cafe-search" element={<CafeSearch />} />
+        <Route path="/favourites" element={<Favourites />} />
+      </Routes>
+    </Router>
   );
 }
 export default App;

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Hero.css";
+import "../pages/Home.css";
 import coffeeImage from "../assets/coffee.jpg";
 import cafeImage from "../assets/cafe.jpg";
 

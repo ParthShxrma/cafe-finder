@@ -1,3 +1,29 @@
+/* 🎨 Global color variables */
+:root {
+  --color-navbar: #ffffff;       /* Navbar background in light mode (white) */
+  --color-highlight: #f78536;    /* Accent (slider, hover, active) */
+  --color-light-bg: #dfebed;     /* Light mode background */
+  --color-dark-bg: #497285;      /* Dark mode background */
+  --color-footer: #2b4450;       /* Footer background */
+  --color-text-light: #2b4450;   /* Text in light mode */
+  --color-text-dark: #dfebed;    /* Text in dark mode */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--color-light-bg);
+  color: var(--color-text-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: var(--color-dark-bg);
+  color: var(--color-text-dark);
+}
+
 .App {
   text-align: center;
 }
@@ -14,18 +40,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: var(--color-navbar);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--color-text-light);
 }
 
 .App-link {
-  color: #61dafb;
+  color: var(--color-highlight);
 }
 
 @keyframes App-logo-spin {

@@ -22,3 +22,7 @@
 .back-to-top:hover {
     background: #563a2e;
 }
+[data-theme="dark"] footer{
+    background-color: var(--color-footer);
+    color: var(--color-text-dark);
+}
