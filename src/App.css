@@ -5,8 +5,8 @@
   --color-light-bg: #dfebed;     /* Light mode background */
   --color-dark-bg: #497285;      /* Dark mode background */
   --color-footer: #2b4450;       /* Footer background */
-  --color-text-light: #2b4450;   /* Text in light mode */
-  --color-text-dark: #dfebed;    /* Text in dark mode */
+  --color-text-light: #f5f5f5;   /* Text in light mode */
+  --color-text-dark: #2b2b2b;    /* Text in dark mode */
 }
 
 body {
