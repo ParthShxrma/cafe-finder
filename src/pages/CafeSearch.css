@@ -122,3 +122,27 @@
     height: 40vw;
   }
 }
+.cafeCard-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.heart-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #ee6781;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.heart-btn:hover {
+  color: #c32b57;
+}
+.heart-btn:focus {
+  outline: none;
+}

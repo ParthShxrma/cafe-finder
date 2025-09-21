@@ -1,0 +1,120 @@
+.favoritesContainer {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: auto;
+  background: #fafafc;
+  min-height: 80vh;
+}
+
+.favoritesTitle {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  letter-spacing: -1px;
+  text-align: left;
+}
+
+.emptyMessage {
+  color: #666;
+  font-size: 1.2rem;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.favoritesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.favoriteCard {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 22px rgba(30,30,60,0.11);
+  padding: 24px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 330px;
+}
+
+.favoriteImage {
+  width: 140px;
+  height: 140px;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 18px;
+  background: #f3f6f8;
+  border: 1px solid #e5e5ee;
+}
+
+.favoriteInfo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.favoriteHeader {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.favoriteName {
+  font-weight: bold;
+  font-size: 1.3rem;
+  color: #1c2241;
+  text-align: center;
+}
+
+.heartBtn {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  color: #ee6781;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.heartBtn:hover {
+  color: #c32b57;
+}
+
+.heartBtn.filled {
+  color: #ee6781;
+}
+
+.favoriteCuisine {
+  font-size: 1.05rem;
+  color: #455474;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.favoriteLocation {
+  font-size: 1rem;
+  color: #888;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .favoritesGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .favoritesGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .favoriteImage {
+    width: 90vw;
+    height: 90vw;
+  }
+}

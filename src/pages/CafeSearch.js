@@ -4,7 +4,7 @@ import './CafeSearch.css';
 const cafes = [
   { id: 1, name: "Cafe De Piccolo", cuisine: "Italian, Cafe, Continental", location: "Rajpur Road", image: "..." },
   { id: 2, name: "Ama Café (Mall of Dehradun)", cuisine: "Cafe, Continental, Fast Food", location: "Rajpur Road / Mall", image: "..." },
-   { id: 3, name: "Loulou", cuisine: "Cafe, Continental, Asian", location: "Rajpur Road / Chukkuwala", image: "..." },
+  { id: 3, name: "Loulou", cuisine: "Cafe, Continental, Asian", location: "Rajpur Road / Chukkuwala", image: "..." },
   { id: 4, name: "Town Table", cuisine: "Multi-cuisine (Indian, Continental, Mexican, Chinese)", location: "Rajpur Road", image: "..." },
   { id: 5, name: "Ellora’s Bakery", cuisine: "Bakery, Desserts, Cafe", location: "Chukkuwala / Rajpur Road", image: "..." },
   { id: 6, name: "XOXO - Cafe, Bakery, Patisserie", cuisine: "Cafe, Bakery, Desserts", location: "Rajpur Road", image: "..." },
@@ -14,7 +14,7 @@ const cafes = [
   { id: 10, name: "Countdown Restaurant", cuisine: "Italian, Chinese, Continental", location: "Central Dehradun / Rajpur", image: "..." },
   { id: 11, name: "Koi", cuisine: "Asian, Pan-Asian", location: "Rajpur Road / Mall area", image: "..." },
   { id: 12, name: "Barbeque Nation ", cuisine: "Buffet, North Indian, BBQ", location: "Jakhan / Rajpur area", image: "..." },
-  { id: 13, name: "Punjab Grill  ", cuisine: "Punjabi, North Indian", location: "Rajpur Road / Central", image: "..." },
+  { id: 13, name: "Punjab Grill  ", cuisine: "Punjabi, North Indian", location: "Rajpur Road / Central", image: "..." },
   { id: 14, name: "House of Nuttmeeg", cuisine: "Oriental, Continental, Bakery", location: "Chukkuwala / Rajpur", image: "..." },
   { id: 15, name: "Smoke House Deli ", cuisine: "Continental, Cafe, Italian", location: "Rajpur / Hathibarkala", image: "..." },
   { id: 16, name: "Dehradun Social", cuisine: "North Indian, Continental, Drinks", location: "Hathibarkala / Salwala", image: "..." },
@@ -82,12 +82,12 @@ const cafes = [
   { id: 78, name: "First Gear Cafe", cuisine: "Cafe, Fast Food, Chinese", location: "Mussoorie Road", image: "..." },
   { id: 79, name: "Big Bee’s Pizza", cuisine: "Pizza, Italian, Fast Food", location: "Rajpur Road", image: "..." },
   { id: 80, name: "Angeethi Restaurant", cuisine: "North Indian, Tandoori", location: "Ballupur / Central Dehradun", image: "..." },
-  { id: 81, name: "The Yellow Chilli", cuisine: "North Indian, Mughlai", location: "Rajpur Road / Mall area", image: "..." },          
-  { id: 82, name: "The Great Kabab Factory", cuisine: "North Indian, Mughlai", location: "Rajpur Road / Mall area", image: "..." },     
+  { id: 81, name: "The Yellow Chilli", cuisine: "North Indian, Mughlai", location: "Rajpur Road / Mall area", image: "..." },
+  { id: 82, name: "The Great Kabab Factory", cuisine: "North Indian, Mughlai", location: "Rajpur Road / Mall area", image: "..." },
   { id: 83, name: "Nukkad", cuisine: "Italian, Cafe, Indian", location: "Old Mussoorie Road", image: "..." }
 ];
 
-const visibleCafes = cafes.slice(0, 30);
+const visibleCafes = cafes.slice(0,42);
 
 function CafeSearch() {
   const [query, setQuery] = useState('');
@@ -118,7 +118,10 @@ function CafeSearch() {
               <div key={cafe.id} className="cafeCard">
                 <img src={cafe.image} alt={cafe.name} className="cafeCard-img" />
                 <div className="cafeCard-info">
-                  <div className="cafeCard-name">{cafe.name}</div>
+                  <div className="cafeCard-header">
+                    <span className="cafeCard-name">{cafe.name}</span>
+                    <button className="heart-btn" title="Add to favourites">♡</button>
+                  </div>
                   <div className="cafeCard-cuisine">{cafe.cuisine}</div>
                   <div className="cafeCard-location">{cafe.location}</div>
                 </div>
@@ -134,7 +137,10 @@ function CafeSearch() {
             <div key={cafe.id} className="cafeCard">
               <img src={cafe.image} alt={cafe.name} className="cafeCard-img" />
               <div className="cafeCard-info">
-                <div className="cafeCard-name">{cafe.name}</div>
+                <div className="cafeCard-header">
+                  <span className="cafeCard-name">{cafe.name}</span>
+                  <button className="heart-btn" title="Add to favourites">♡</button>
+                </div>
                 <div className="cafeCard-cuisine">{cafe.cuisine}</div>
                 <div className="cafeCard-location">{cafe.location}</div>
               </div>

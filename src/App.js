@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import CafeSearch from "./pages/CafeSearch";
-import Favourites from "./pages/Favourites";
+import Favourites from "./pages/Favorites";
 
 function App() {
   return (
